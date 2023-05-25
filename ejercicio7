@@ -1,0 +1,82 @@
+efectivo=0
+division= 0.25
+contAgua = 0 
+contAzúcar = 0 
+contAceite = 0 
+contArroz = 0 
+contFideos = 0 
+contBebida = 0 
+contChocolate = 0 
+contPan_molde = 0
+vAgua = 0 
+vAzúcar = 0 
+vAceite = 0 
+vArroz = 0 
+vFideos = 0 
+vBebida = 0 
+vChocolate = 0 
+vPan_molde = 0
+print("Bienvenido al super mercado")
+while True:   
+    print("Seleccione cuanes y cuantos productos que necesita")
+    print("1.- Agua------$600")
+    print("2.- Azucar--------$1200")
+    print("3.- Aceite---------$1500")
+    print("4.- Arroz---------$1250")
+    print("5.- Fideos---------$790")
+    print("6.- Bebida---------$1780")
+    print("7.- Chocolate---------$2500")
+    print("8.- Pan de molde---------$1340")
+    print("9.-Terminar compra")
+    try:
+        opcion=int(input("Ingrese cuales y cuantos productos desea llevar: "))   # sentencia para escojer y acumular productos
+        if 0<opcion<=9:
+            if opcion==1:
+                contAgua+=1
+                vAgua+=600
+            elif opcion==2:
+                contAzúcar+=1
+                vAzúcar+=1200
+            elif opcion==3:
+                contAceite+=1
+                vAceite+=1500
+            elif opcion==4:
+                contAceite+=1
+                vAceite+=1250
+            elif opcion==5:
+                contAceite+=1
+                vAceite+=790
+            elif opcion==6:
+                contAceite+=1
+                vAceite+=1780
+            elif opcion==7:
+                contAceite+=1
+                vAceite+=2500
+            elif opcion==8:
+                contAceite+=1
+                vAceite+=1340
+            else:
+                valortotal=vAgua+vAzúcar+vAceite+vArroz+vFideos+vBebida+vChocolate+vPan_molde
+                break
+        else:
+            print("Ingrese un numero positivo entre 0 y 4")
+    except:
+        print("Ingrese un valor numerico")
+
+# sentencia para los cliente preferencial
+cliente=int(input("Es usted cliente preferencial? 1.-Sí, 2.-No : "))
+
+if cliente==1:
+    print(f"el total de la compra sera de :${valortotal/division}") # nose como redondear :3
+    
+elif cliente==2:
+    print(f"el total de la compra sera de : ${valortotal}") 
+#sentencia para ingresar el efectivo
+efectivo=int(input("ingrese su efectivo: "))
+if (valortotal <=efectivo):
+    print(f"Su vuelto sera de: ${efectivo-valortotal}")
+    print("Gracias por su compra, vuelva pronto!")
+    
+   
+else:
+    print("Dinero insuficiente, Guardias!")
