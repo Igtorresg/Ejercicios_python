@@ -1,0 +1,59 @@
+contp=0
+muybajo=0
+bajo=0
+normal=0
+bueno=0
+excelenteservicio=0
+print("Bienvenidos a la aplicacion CollaborNa")
+while True:
+    print("Indique su grado de satisfaccion ")
+    print("1.-Muy bajo")
+    print("2.- Bajo")
+    print("3.-Normal")
+    print("4.-Bueno")
+    print("5.-Excelente Servicio")
+    print("6.-Terminar encuesta")
+    try:
+        opcion=int(input("Escoja una opcion: "))
+        if 0<opcion<=6:
+            if opcion==1:
+                contp+=1
+                muybajo+=1
+            elif opcion==2:
+                contp+=1
+                bajo+=2
+            elif opcion==3:
+                contp+=1
+                normal+=3
+            elif opcion==4:
+                contp+=1
+                bueno+=4
+            elif opcion==5:
+                contp+=1
+                excelenteservicio+=5
+            else:
+                valortotal=muybajo+bajo+normal+bueno+excelenteservicio
+                break
+        else:
+            ("Ingrese un numero positivo entre 0 y 6")
+    except:
+        print("Ingrese un valor numerico")
+while True:
+    try:
+        print("desea ver el resultado del promedio y la cantidad de personas que lo realizaron?")
+        print("1.-si")
+        print("2.- no")
+        opcion2=int(input("escoja una opcion: "))
+        if 0<opcion2<3:
+            if opcion2==1:
+                print(f"el promedio de la encuesta sera de : {valortotal/contp}")
+                print(f"la cantidad de personas que participaron fue de {contp}")
+                break
+            elif opcion2==2:
+                print("estaran listos los resultados para cuando lo desee")
+            else:
+                print("Ingrese una opcion valida")
+        else:
+            print("Ingrese una opcion valida")
+    except:
+        print("Ingrese un valor numerico")
