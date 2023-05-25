@@ -1,0 +1,17 @@
+def main():
+    print("N° menores que cero")
+    valores = int(input("¿Cuántos valores va a introducir? "))
+    if valores < -1:
+        print("No se puede")
+    else:
+        anterior = int(input("Escriba un número: "))
+        for i in range(valores -1):
+            numero = int(input(f"Escriba un número más grande que {anterior}: "))
+            if numero <= anterior:
+                print(f"¡{numero} no es mayor que {anterior}!")
+            anterior = numero
+        print("todos son menores que cero.")
+
+
+if __name__ == "__main__":
+    main()
