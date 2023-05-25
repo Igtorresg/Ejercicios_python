@@ -1,0 +1,10 @@
+a=float(input("Ingrese el lado a del triangulo: "))
+b=float(input("Ingrese el lado b del triangulo: "))
+c=float(input("Ingrese el lado c del triangulo: "))
+
+if(a==b==c):
+    print("El triangulo es equilátero")
+elif(a==b or a==c or b==c):
+    print("El triangulo es isosceles")
+else:
+    print("El triangulo es escaleno")
