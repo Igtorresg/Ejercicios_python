@@ -1,0 +1,41 @@
+#Cantidad de Platos: 3 
+#___________________________
+#Total a pagar $13500
+#___________________________
+#Dinero Ingresado $15000
+#Vuelto $1500
+#___________________________
+
+#*****Además, debe validar que el dinero ingresado permita pagar el total.
+
+valorplato = 4500
+
+print("Bienvenido a LunchExpresss")
+print("1. Charquicán con Huevo Frito - Vegetariano")
+print("2. Salteado de Verduras con Fideos - Vegano")
+print("3. Lomo a lo pobre - Hipocalórico")
+
+plato = int(input("Seleccione un plato: "))
+if plato >= 1 and plato <= 3:
+    cant = int(input("Ingrese cantidad:"))
+    total = valorplato*cant
+    efectivo = int(input("¿Con cuanto cancela?: $"))
+    if (total<=efectivo):
+        if plato == 1:
+            print("Charquicán con Huevo Frito - Vegetariano")
+        elif plato == 2:
+            print("Salteado de Verduras con Fideos - Vegano") 
+        else:
+            print("Lomo a lo Pobre - Hipercalórico")
+        #Impresión común para todas las opciones
+        print("Cantidad de Platos:", cant)
+        print("___________________________")
+        print("Total a pagar $", total)
+        print("___________________________")
+        print("Dinero Ingresado $", efectivo)
+        print("Vuelto $", efectivo - total)
+        print("___________________________") 
+    else:
+        print(f"Lo sentimos, No le alcanza. El total es: ${total}")       
+else:
+    print("Error, plato seleccionado NO EXISTE. Vuelva a intentarlo")
