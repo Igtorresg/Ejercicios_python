@@ -1,0 +1,8 @@
+num=int(input("Ingrese un N° (mayor a  y menor a 101)"))
+if 1<num<101: #num>1 and num<101
+    if num%2==0:
+        print(f"{num} es par")
+    else:
+        print(f"{num} es impar")
+else:
+    print("Numero fuera de rango!!")
