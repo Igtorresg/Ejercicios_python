@@ -1,0 +1,48 @@
+opcPpal='x'
+while opcPpal!='c':
+    while True:
+        print("_"*50)
+        print("\tSandwicheria El Duocano")
+        print("_"*50)
+        print("a.- Realizar Venta")
+        print("b.- Cerrar Turno")
+        print("c.- Salir")
+        try:
+                opcPpal=(input("Ingrese su opción: ")).lower()
+                if opcPpal!='a' and opcPpal!='b' and opcPpal!='c':
+                     raise Exception()
+                break
+        except:
+            print("Opción No existe!")
+    if opcPpal=='a':
+        opc=0
+        subTotal=0
+        contador=0
+        while opc!=4:
+            print("_"*50)
+            print("\t\tMenu")
+            print("_"*50)
+            print("1.- DuocChoripan $1200")
+            print("2.- DuocItaliano $1500")
+            print("3.- DuocVegano $2000")
+            print("4.- Salir")
+            while True:
+                try:
+                    opc=int(input("Ingrese su opción: "))
+                    if 1<=opc<=4:
+                        break
+                    else:
+                        print("Opción fuera de Rango!")
+                except:
+                    print("Opción es un número!!")
+            if opc==1:
+                subTotal+=1200
+                contador+=1
+            elif opc==2:
+                subTotal+=1500
+                contador+=1
+            elif opc==3:
+                subTotal+=2000
+                contador+=1
+            else:
+                print(f"El Total a Pagar es: ${subTotal}")
