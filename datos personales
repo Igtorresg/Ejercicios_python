@@ -1,0 +1,5 @@
+nombre=input("ingrese su nombre: ")
+rut=input("ingrese su rut: ")
+correo=input("ingrese su correo: ")
+cell=input("ingrese su Fono: ")
+print(f"Nombre: {nombre}\nRut: {rut}\nCorreo: {correo}\tTelefono: {cell}")
