@@ -1,0 +1,38 @@
+contn95=0
+contffp1=0
+contspsc=0
+valorn95=0
+valorffp1=0
+valorspsc=0
+print("Compra de mascarillas para el personal")
+while True:
+    print("Seleccione las  mascarillas que necesite")
+    print("1.- N95------$8000")
+    print("2.- FFP1--------$6500")
+    print("3.- SPSC---------12000")
+    print("4.-Terminar compra")
+    try:
+        opcion=int(input("Ingrese una opcion: "))
+        if 0<opcion<=4:
+            if opcion==1:
+                contn95+=1
+                valorn95+=8000
+            elif opcion==2:
+                contffp1+=1
+                valorffp1+=6500
+            elif opcion==3:
+                contspsc+=1
+                valorspsc+=12000
+            else:
+                valortotal=valorn95+valorffp1+valorspsc
+                break
+        else:
+            print("Ingrese un numero positivo entre 0 y 4")
+    except:
+        print("Ingrese un valor numerico!")
+print("-------------------------")
+print(f"{contn95} N95 {valorn95}")
+print(f"{contffp1} FFP1 {valorffp1}")
+print(f"{contspsc} SPSC {valorspsc}")
+print("------------------------------")
+print(f"Total {valortotal}")
