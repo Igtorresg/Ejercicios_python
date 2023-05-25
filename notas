@@ -1,0 +1,5 @@
+a = float(input("Nota 1: "))
+b = float(input("Nota 2: "))
+c = float(input("Nota 3: "))
+p = (a+b+c)/3
+print("El promedio es: ", p)
